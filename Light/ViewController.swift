@@ -11,16 +11,8 @@ class ViewController: UIViewController {
     var lightOn = true
 
     fileprivate func updateUI() {
-        if lightOn {
-            view.backgroundColor = .white
-            lightButton.setTitle("Off", for: .normal)
-        } else {
-            view.backgroundColor = .black
-            lightButton.setTitle("On", for: .normal)
-        }
+        view.backgroundColor = lightOn ? .white : .black
     }
-    
-    @IBOutlet var lightButton: UIButton!
     
     @IBAction func buttonPressed(_ sender: Any) {
         lightOn.toggle()
